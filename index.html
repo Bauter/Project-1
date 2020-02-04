@@ -38,7 +38,7 @@
   </head>
   <body>
     <!--Title-->
-    <div class="card">
+    <div class="card ml-3 mr-3 mt-3" id="main-header" style="max-width: 100%;">
       <div class="gradient-border" id="box">
         <h1 id="title" class="div-main-title">Went</h1>
         <br />
@@ -62,53 +62,48 @@
     <!--Search and Display Weather-->
 
     <div class="card">
-      <div class="card-header bg-dark text-white text-center">
-        <h2 class="div-title">Current Weather</h2>
+
+      <div class="card-header bg-dark text-white text-center ml-3 mr-3 mt-3 rounded">
+        <h2 class="div-title ">Current Weather</h2>
       </div>
+
+      
       <div class="card-body">
         <!--Display current weather-->
-        <div class="row justify-content-center">
-          <div class="card mb-3 border-0" style="max-width: 540px;">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img id="img" class="card-img" />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body text-center">
-                  <h3 id="CityName" class="card-title font-weight-bold"></h3>
-                  <p id="temperature" class="card-text font-weight-bold"></p>
-                  <p id="description" class="card-text font-weight-bold"></p>
-                  <br />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="container" class="bg-dark text-white p-5 rounded">
-          <h4 id="ul-p-text">Select a major city to get current weather:</h4>
-          <ul id="selectable" class="font-weight-bold"></ul>
-        </div>
-        <!-- Search -->
-        <div class="card-body">
-          <form class="form-inline">
-            <div class="form-group mb-2">
-              <h2>Search</h2>
-            </div>
-            <div class="form-group mx-sm-3 mb-2">
-              <input
-                type="text"
-                class="form-control"
-                id="search"
-                placeholder="City"
-              />
-            </div>
-            <button id="submit" type="submit" class="btn mb-2 font-weight-bold">
-              Submit
-            </button>
-          </form>
-        </div>
+        <div id="container" class="bg-dark text-white p-5 rounded row ml-3 mr-3 rounded" style="max-width: 100%;">
+          <div class="card-body col-6" id="form-list">
 
-        <!--card body div-->
+            <form class="form-inline">
+
+              <div class="form-group mb-2">
+                <h2>Search</h2>
+              </div>
+              
+              <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="search" placeholder="City"/>
+              </div>
+
+              <button id="submit" type="submit" class="btn mb-2 font-weight-bold">
+                Submit
+              </button>
+
+            </form>
+
+            <br>
+         
+            <h4 id="ul-p-text">Select a major city to get current weather:</h4>
+            <ul id="selectable" class="font-weight-bold"></ul>
+          </div>
+
+          <div class="col-6 float-right" id="weatherInfo">
+            <img id="img"  />
+            <h3 id="CityName" class="card-title font-weight-bold"></h3>
+            <p id="temperature" class="card-text font-weight-bold"></p>
+            <p id="description" class="card-text font-weight-bold"></p>
+            <br />
+          </div>
+
+        </div>
       </div>
     </div>
 
@@ -117,12 +112,16 @@
     <!--Card 2-->
 
     <div class="card">
-      <div class="card-header bg-dark text-white text-center">
+
+      <div class="card-header bg-dark text-white text-center ml-3 mr-3 mt-3 mb-3 rounded">
         <h2 class="div-title">Upcoming Events</h2>
       </div>
-      <div class="card-body">
-        <div class="card-group">
-          <div class="card p-2 m-1 bg-dark">
+
+      <div class="card-body ml-3 mr-3" id="events-div">
+
+        <div class="card-group" id="event-row-1">
+
+          <div class="card p-2 m-1 bg-dark rounded">
             <img id="img1" class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
               <h5 id="title1" class="card-title"></h5>
@@ -135,7 +134,8 @@
               </p>
             </div>
           </div>
-          <div class="card p-2 m-1 bg-dark">
+
+          <div class="card p-2 m-1 bg-dark rounded">
             <img id="img2" s class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
               <h5 id="title2" class="card-title"></h5>
@@ -148,7 +148,8 @@
               </p>
             </div>
           </div>
-          <div class="card p-2 m-1 bg-dark">
+
+          <div class="card p-2 m-1 bg-dark rounded">
             <img id="img3" class="card-img-top rounded-lg" />
             <div class="card-body font-weight-bold text-white">
               <h5 id="title3" class="card-title"></h5>
@@ -167,8 +168,9 @@
 
         <!--Events 2-->
 
-        <div class="card-group">
-          <div class="card p-2 m-1 bg-dark">
+        <div class="card-group" id="event-row-2">
+
+          <div class="card p-2 m-1 bg-dark rounded">
             <img id="img4" class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
               <h5 id="title4" class="card-title"></h5>
@@ -181,7 +183,8 @@
               </p>
             </div>
           </div>
-          <div class="card p-2 m-1 bg-dark">
+
+          <div class="card p-2 m-1 bg-dark rounded">
             <img id="img5" class="card-img-top rounded-lg" />
             <div class="card-body text-white font-weight-bold">
               <h5 id="title5" class="card-title"></h5>
@@ -194,7 +197,8 @@
               </p>
             </div>
           </div>
-          <div class="card p-2 m-1 bg-dark">
+          
+          <div class="card p-2 m-1 bg-dark rounded">
             <img id="img6" class="card-img-top rounded-lg" />
             <div class="card-body font-weight-bold text-white">
               <h5 id="title6" class="card-title"></h5>
@@ -209,14 +213,14 @@
           </div>
         </div>
 
-        <!--Card body div-->
+        
       </div>
     </div>
 
     <br />
 
     <!--Footer-->
-    <div class="card">
+    <div class="card ml-3 mr-3 mb-3 rounded" id="footer-div">
       <h5 class="card-header text-center text-white bg-dark p-5 div-title">
         Copyright &copy; 2020
       </h5>

@@ -32,6 +32,7 @@ $(document).ready(function() {
       ajaxCallOWM();
       ajaxCall();
       $('.hide-link').show();
+      $('#events-div').show();
 
       // returns siblings to original position so only current city is animated to the right... sometimes buggy if clicking through links too quickly
 
@@ -56,6 +57,7 @@ $(document).ready(function() {
     ajaxCallOWM();
     ajaxCall();
     $('.hide-link').show();
+    $('#events-div').show();
   });
 
   // Used to utilize jqueryUI selectable function
