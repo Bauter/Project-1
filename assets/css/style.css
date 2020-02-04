@@ -1,5 +1,5 @@
 body {
-  background: whitesmoke;
+  background: rgb(180, 172, 172);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
@@ -196,12 +196,6 @@ body {
   font-size: 1.4em;
 }
 
-/* removed due to strange highlighting offset, and extending past city name length */
-
-/*#CityName {               !!! add this under 'ui-widget-content' instead  of 'CityName' !!!
-  color: #3ce7de;
-}*/
-
 #submit {
   background-color: rgb(62, 145, 241);
 }
@@ -237,8 +231,7 @@ S
 /* *Bryan edit = Added a cursor change on hover & transform/transition to make hovered items more dynamic */
 #selectable li:hover {
   cursor: pointer;
-  transform: translateY(-2px);
-  transition: transform 150ms;
+  
 }
 
 .hide-link {
@@ -251,12 +244,39 @@ S
   color: transparent;
 }
 
+#current-weather-header { /* Can be commented out to remove rainbow BG color */
+  background-image: linear-gradient(to left);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#current-weather-title {
+  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#upcoming-events-header { /* Can be commented out to remove rainbow BG color */
+  background-image: linear-gradient(to left);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#upcoming-events-title {
+  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 #CityName {
   color: rgb(62, 145, 241);
 }
 
 #ul-p-text {
-  text-decoration: underline;
+  
+  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .card-img-top {
