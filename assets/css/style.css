@@ -231,7 +231,7 @@ S
 /* *Bryan edit = Added a cursor change on hover & transform/transition to make hovered items more dynamic */
 #selectable li:hover {
   cursor: pointer;
-  
+  background-color: #a1a5a8ad;
 }
 
 .hide-link {
@@ -251,9 +251,7 @@ S
 }
 
 #current-weather-title {
-  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #343a40;
 }
 
 #upcoming-events-header { /* Can be commented out to remove rainbow BG color */
@@ -263,13 +261,11 @@ S
 }
 
 #upcoming-events-title {
-  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #343a40;
 }
 
-#CityName {
-  color: rgb(62, 145, 241);
+#cityName {
+  color: rgb(48, 5, 240);
 }
 
 #ul-p-text {
@@ -286,4 +282,12 @@ S
 
 #events-div {
   display: none;
+}
+
+.shadow6 {
+  box-shadow: 5px 5px rgba(48, 5, 240, 0.4),
+              10px 10px rgba(48, 5, 240, 0.3),
+              15px 15px rgba(48, 5, 240, 0.2),
+              20px 20px rgba(48, 5, 240, 0.1),
+              25px 25px rgba(48, 5, 240, 0.05);
 }

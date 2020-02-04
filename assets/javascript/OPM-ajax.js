@@ -33,10 +33,12 @@ $(document).ready(function() {
       ajaxCall();
       $('.hide-link').show();
       $('#events-div').show();
+      $('#weatherInfo').css("background-color", "rgba(180, 172, 172, 0.699)").addClass("shadow6 rounded");
+      
 
       // returns siblings to original position so only current city is animated to the right... sometimes buggy if clicking through links too quickly
       $(this).siblings().css({ transform: 'translatex(0)', transition: 'transform 200ms' });
-      
+
       // messing with Anime.js to offset selected city
       anime({
         targets: this,
@@ -59,6 +61,7 @@ $(document).ready(function() {
     ajaxCall();
     $('.hide-link').show();
     $('#events-div').show();
+    $('#weatherInfo').css("background-color", "rgba(180, 172, 172, 0.699)").addClass("shadow6 rounded");
   });
 
   // Used to utilize jqueryUI selectable function
@@ -101,7 +104,7 @@ $(document).ready(function() {
       console.log(city);
 
       // Used to manipulate DOM with API information
-      $('#CityName').text(city);
+      $('#cityName').text(city);
       $('#temperature').html('Temp: ' + "<span>" + temp + "</span>" + ' &#x2109'); // has to be .html to get degrees fahrenheit symbol to show
       $('#description').html('Weather Description: ' + '<br>' + weatherDescription);
 
