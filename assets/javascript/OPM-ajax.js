@@ -9,6 +9,7 @@ let temp;
 let city;
 let date;
 let humidity;
+let working;
 let time;
 let event;
 let url;
@@ -217,6 +218,14 @@ $(document).ready(function() {
       event = r._embedded.events[0].name;
       console.log(event);
 
+        if( event = r._embedded.events[0].name ) {
+           working = true;
+           console.log("working = true")
+        } else {
+          working = false;
+          console.log("working = false")
+        }
+
       url = r._embedded.events[0].url;
       console.log(url);
 
@@ -369,6 +378,13 @@ $(document).ready(function() {
       $('#img5').attr('src', images4);
 
       $('#img6').attr('src', images5);
+
+      if( r._embedded.events[""] === undefined ) {
+        $("#events-div").text("<h4>" + "No Events found, try searching the next closest large city" + "<h4>");
+        console.log("events undefined")
+      } else {
+        console.log("event load successful")
+      };
     });
   }
 });

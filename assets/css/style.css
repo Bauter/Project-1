@@ -219,9 +219,6 @@ body {
   color: white;
 }
 
-/* *Bryan edit = removed "#selectable li" took care of the offset issue we had before, spacing bewteen city list can now be tweeked (i couldn't adjust the spacing before) */
-S
-
 /* *Bryan edit = created p tag between <ul> tags to manipulate text w/o effecting <li> items */
 #ul-p-text {
   font-size: 20px;
@@ -264,6 +261,12 @@ S
   color: #343a40;
 }
 
+#footer-title {
+  background-image: linear-gradient(to left, white, rgb(62, 145, 241));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 #cityName {
   color: rgb(48, 5, 240);
 }
@@ -290,4 +293,9 @@ S
               15px 15px rgba(48, 5, 240, 0.2),
               20px 20px rgba(48, 5, 240, 0.1),
               25px 25px rgba(48, 5, 240, 0.05);
+}
+
+.footer-link:hover {
+  color: orange;
+  text-decoration: none;
 }
