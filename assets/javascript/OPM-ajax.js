@@ -379,7 +379,7 @@ $(document).ready(function() {
 
       $('#img6').attr('src', images5);
 
-      if( r._embedded.events[""] === undefined ) {
+      if( r._embedded.events === undefined ) {
         $("#events-div").text("<h4>" + "No Events found, try searching the next closest large city" + "<h4>");
         console.log("events undefined")
       } else {
