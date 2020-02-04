@@ -35,7 +35,8 @@ $(document).ready(function() {
       $('#events-div').show();
 
       // returns siblings to original position so only current city is animated to the right... sometimes buggy if clicking through links too quickly
-
+      $(this).siblings().css({ transform: 'translatex(0)', transition: 'transform 200ms' });
+      
       // messing with Anime.js to offset selected city
       anime({
         targets: this,
@@ -44,7 +45,7 @@ $(document).ready(function() {
         easing: 'easeOutSine'
       });
 
-      $(this).siblings().css({ transform: 'translatex(0)', transition: 'transform 200ms' });
+      
     });
   }
 
@@ -101,8 +102,14 @@ $(document).ready(function() {
 
       // Used to manipulate DOM with API information
       $('#CityName').text(city);
-      $('#temperature').html('Temp: ' + temp + ' &#x2109'); // has to be .html to get degrees fahrenheit symbol to show
+      $('#temperature').html('Temp: ' + "<span>" + temp + "</span>" + ' &#x2109'); // has to be .html to get degrees fahrenheit symbol to show
       $('#description').html('Weather Description: ' + '<br>' + weatherDescription);
+
+      if (temp > 65) {
+        $('span').css("color", "red")
+      } else {
+        $('span').css("color", "lightblue")
+      };
 
       // Variables to compare API weather ID "weatherID" to for icon img
       let rainyArray = [500, 501, 502, 503, 504];
