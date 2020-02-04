@@ -8,6 +8,7 @@ let weatherDescription;
 let temp;
 let city;
 let date;
+let humidity;
 let time;
 let event;
 let url;
@@ -95,6 +96,10 @@ $(document).ready(function() {
       weatherDescription = RD.weather[0].description;
       console.log(weatherDescription);
 
+      //humidity
+      humidity = RD.main.humidity;
+      console.log(humidity);
+
       //temperature (in Fahrenheit because of units parameter in queryURL "imperial")
       temp = Math.ceil(RD.main.temp);
       console.log(temp);
@@ -106,12 +111,15 @@ $(document).ready(function() {
       // Used to manipulate DOM with API information
       $('#cityName').text(city);
       $('#temperature').html('Temp: ' + "<span>" + temp + "</span>" + ' &#x2109'); // has to be .html to get degrees fahrenheit symbol to show
+      $("#humidity").text("Humidity: " + humidity + "%");
       $('#description').html('Weather Description: ' + '<br>' + weatherDescription);
 
       if (temp > 65) {
-        $('span').css("color", "red")
+        $('span').css("color", "red");
+      } else if (temp < 65 && temp > 32) {
+        $('span').css("color", "lightblue");
       } else {
-        $('span').css("color", "lightblue")
+        $('span').css("color", "blue");
       };
 
       // Variables to compare API weather ID "weatherID" to for icon img
