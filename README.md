@@ -1,12 +1,20 @@
-# Project-1 - WENT
+# Project-1 - WENT (forked)
 
 This is project one, with Hue (pprchang), Bryan (Bauter) and I (GordonConness) being the collaborators.
+
+### NOTE ###
+
+This is my FORKED repo of project-1 - Went. I have gone on to play with the styling and expand upon the logic (to avoid changes to the original repo).
 
 ## What is this repo?
 
 This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project between Gordon, Hue, and Bryan.
 
 -Its purpose was to create a website with a team, dividing responsibilities while working together to achieve the overall goal. Practicing what it means to work with a team of other developers.
+
+## Link to Live-pages ##
+
+https://bauter.github.io/Project-1/
 
 ## Project Requirements
 
