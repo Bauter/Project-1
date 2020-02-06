@@ -12,9 +12,13 @@ This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project
 
 -Its purpose was to create a website with a team, dividing responsibilities while working together to achieve the overall goal. Practicing what it means to work with a team of other developers.
 
-## Link to Live-pages ##
+### Link to Live-pages (forked) ###
 
 https://bauter.github.io/Project-1/
+
+### Link to Project-1 Live-pages (original) ###
+
+https://gordonconness.github.io/Project-1/
 
 ## Project Requirements
 
