@@ -58,12 +58,19 @@ $(document).ready(function() {
     cityLocation = $('#search')
       .val()
       .trim();
+
+    if( $('#search').val() == "") {
+      alert("please enter a city");
+    } else {
+
     console.log(cityLocation);
     ajaxCallOWM();
     ajaxCall();
     $('.hide-link').show();
     $('#events-div').show();
     $('#weatherInfo').css("background-color", "rgba(180, 172, 172, 0.699)").addClass("shadow6 rounded");
+    };
+
   });
 
   // Used to utilize jqueryUI selectable function
@@ -379,7 +386,7 @@ $(document).ready(function() {
 
       $('#img6').attr('src', images5);
 
-      if( r._embedded.events === undefined ) {
+      if( events === undefined ) {
         $("#events-div").text("<h4>" + "No Events found, try searching the next closest large city" + "<h4>");
         console.log("events undefined")
       } else {
