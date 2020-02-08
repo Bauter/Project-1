@@ -14,6 +14,8 @@ let time;
 let event;
 let url;
 var images;
+
+
 // City array list we will use and loop through in our for loop to create list items and assign data-names
 let cityArray = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'];
 
@@ -54,23 +56,22 @@ $(document).ready(function() {
   }
 
   $('#submit').on('click', function(event) {
-    event.preventDefault();
+   
     cityLocation = $('#search')
       .val()
       .trim();
 
-    if( $('#search').val() == "") {
-      alert("please enter a city");
-    } else {
-
-    console.log(cityLocation);
-    ajaxCallOWM();
-    ajaxCall();
-    $('.hide-link').show();
-    $('#events-div').show();
-    $('#weatherInfo').css("background-color", "rgba(180, 172, 172, 0.699)").addClass("shadow6 rounded");
-    };
-
+    if( $('#search').val() !== "") {
+      event.preventDefault();
+      console.log(cityLocation);
+      ajaxCallOWM();
+      ajaxCall();
+      $('.hide-link').show();
+      $('#events-div').show();
+      $('#weatherInfo').css("background-color", "rgba(180, 172, 172, 0.699)").addClass("shadow6 rounded");
+      
+    } else { }
+   
   });
 
   // Used to utilize jqueryUI selectable function
