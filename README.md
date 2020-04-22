@@ -16,6 +16,8 @@ This Repo is for UWM web-dev. boot-camp Project-1, its is a collaborated project
 
 https://bauter.github.io/Project-1/
 
+![went-app](went.gif)
+
 ### Link to Project-1 Live-pages (original) ###
 
 https://gordonconness.github.io/Project-1/
